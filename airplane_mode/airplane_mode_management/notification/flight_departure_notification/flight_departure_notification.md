@@ -1,0 +1,1 @@
+Flight {{ doc.name }} is scheduled to depart tomorrow ({{ frappe.utils.format_date(doc.date_of_departure) }}).
