@@ -1,0 +1,50 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2025-09-01 17:14:06.166724",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "reminder_email",
+  "default_rent"
+ ],
+ "fields": [
+  {
+   "fieldname": "reminder_email",
+   "fieldtype": "Data",
+   "label": "Reminder Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "default_rent",
+   "fieldtype": "Data",
+   "label": "Default Rent"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-09-01 17:19:51.082552",
+ "modified_by": "Administrator",
+ "module": "Airport Shops",
+ "name": "Shop Settings",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
