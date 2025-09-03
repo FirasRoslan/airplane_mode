@@ -5,19 +5,19 @@ app_description = "An application to manage and simulate airplane mode functions
 app_email = "firas@gmail.com"
 app_license = "mit"
 
-# Scheduler - run daily or monthly as needed
+# # Scheduler - run daily or monthly as needed
 # scheduler_events = {
 #     "daily": [
 #         "airplane_mode.airplane_mode.airport_shops.tasks.send_rent_reminders"
 #     ]
 # }
 
-# Doc events - background update when flight changes
-doc_events = {
-    "Airplane Flight": {
-        "on_update": "airplane_mode.airplane_mode_management.airport_shops.airplane_utils.update_ticket_gate_handler"
-    }
-}
+# # Doc events - background update when flight changes
+# doc_events = {
+#     "Airplane Flight": {
+#         "on_update": "airplane_mode.airplane_mode_management.airport_shops.airplane_utils.update_ticket_gate_handler"
+#     }
+# }
 
 
 # Apps

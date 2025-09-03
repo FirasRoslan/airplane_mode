@@ -1,8 +1,16 @@
 {% extends "templates/web.html" %}
 {% block page_content %}
-<h1>{{ doc.shop_name }}</h1>
-<p>Shop No: {{ doc.shop_number }}</p>
-<p>Airport: {{ doc.airport }}</p>
-<p>Status: {{ doc.status }}</p>
-<a href="/apply-for-shop?shop={{ doc.name }}">Apply</a>
+<div class="shop-details-card" style="max-width: 500px; margin: 2rem auto; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); background: #fff;">
+    <h1 style="margin-bottom: 0.5rem; color: #2c3e50;">{{ doc.shop_name }}</h1>
+    <div style="margin-bottom: 1rem; color: #555;"></div>
+        <span style="display: block; margin-bottom: 0.3rem;"><strong>Shop No:</strong> {{ doc.shop_number }}</span>
+        <span style="display: block; margin-bottom: 0.3rem;"><strong>Airport:</strong> {{ doc.airport }}</span>
+        <span style="display: block;"><strong>Status:</strong> {{ doc.status }}</span>
+    </div>
+    <div style="text-align: center; margin-top: 1.5rem;"></div>
+        <a href="/apply-for-shop/new?shop={{ doc.name }}" style="display: inline-block; padding: 0.6rem 1.5rem; background: #007bff; color: #fff; border-radius: 6px; text-decoration: none; font-weight: 500; transition: background 0.2s;">
+            Apply for this Shop
+        </a>
+    </div>
+</div>
 {% endblock %}

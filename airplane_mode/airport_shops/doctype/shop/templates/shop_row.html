@@ -1,4 +1,15 @@
 <div>
-	<a href="{{ doc.route }}">{{ doc.title or doc.name }}</a>
+	<ul>
+		<li>
+			<b>{{ doc.shop_name }}</b><br>
+			Shop No: {{ doc.shop_number }} <br>
+			Airport: {{ doc.airport }} <br>
+			Status: {{ doc.status }} <br>
+			<a href="/{{ doc.route }}" 
+			   style="display:inline-block;padding:8px 16px;background:#007bff;color:#fff;text-decoration:none;border-radius:4px;">
+				View Shop
+			</a>
+		</li>
+	</ul>
+	<hr>
 </div>
-<!-- this is a sample default list template -->

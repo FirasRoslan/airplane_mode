@@ -33,3 +33,6 @@ class AirplaneTicket(Document):
 		number = random.randint(1, 99)   # random nombor 1 - 99
 		letter = random.choice(['A','B','C','D','E'])  # random huruf seat
 		self.seat = f"{number}{letter}"
+
+	def validate(self):
+		self.gate_number = random.randint(1, 5)  # random gate number 1 - 5

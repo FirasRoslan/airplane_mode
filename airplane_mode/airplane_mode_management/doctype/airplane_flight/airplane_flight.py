@@ -8,11 +8,13 @@ class AirplaneFlight(WebsiteGenerator):
     def on_submit(self):
         self.status = "Completed"
 
-    def on_update(self):
-        # enqueue background job bila gate_number berubah
-        frappe.enqueue(
-            "airport_shops.tasks.update_tickets_gate",
-            flight=self.name,
-            gate=self.gate_number
-        )
+    # def on_update(self):
+    #     # enqueue background job bila gate_number berubah
+    #     frappe.enqueue(
+    #         "airport_shops.tasks.update_tickets_gate",
+    #         flight=self.name,
+    #         gate=self.gate_number
+    #     )
 
+    # # def validate(self):
+    # #     self.gate_number = 

@@ -1,14 +1,39 @@
 {% extends "templates/web.html" %}
 
 {% block page_content %}
-<h2>Flight Details</h2>
-
-<b>{{ doc.source_airport }} → {{ doc.destination_airport }}</b><br>
-Date: {{ frappe.utils.format_date(doc.date_of_departure, "d MMMM, YYYY") }} <br>
-Time: {{ doc.time_of_departure }} <br>
-Duration: {{ frappe.utils.format_duration(doc.duration) }} <br>
-Airline: {{ frappe.db.get_value("Airplane", doc.airplane, "airline") }} <br>
-
-<br>
-<a class="btn btn-primary" href="/book-flight-ticket-web-form/new?flight={{ doc.name }}">Book Flight</a>
-{% endblock %}
+<div class="flight-card" style="max-width: 500px; margin: 40px auto; background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); padding: 32px 28px;">
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+        <div>
+            <h2 style="margin-bottom: 8px; font-size: 1.6rem; font-weight: 700; color: #2d3748;">Flight Details</h2>
+            <div style="font-size: 1.2rem; font-weight: 500; color: #4a5568;">
+                {{ doc.source_airport }} 
+                <span style="margin: 0 10px; color: #3182ce; font-size: 1.4rem;">&#8594;</span>
+                {{ doc.destination_airport }}
+            </div>
+        </div>
+        <div style="background: #3182ce; color: #fff; border-radius: 8px; padding: 8px 16px; font-weight: 600;">
+            {{ frappe.db.get_value("Airplane", doc.airplane, "airline") }}
+        </div>
+    </div>
+    <hr style="margin: 24px 0; border: none; border-top: 1px solid #e2e8f0;">
+    <div style="display: flex; flex-direction: column; gap: 12px; color: #2d3748;">
+        <div>
+            <span style="font-weight: 600;">Date:</span>
+            {{ frappe.utils.format_date(doc.date_of_departure, "d MMMM, YYYY") }}
+        </div>
+        <div>
+            <span style="font-weight: 600;">Time:</span>
+            {{ doc.time_of_departure }}
+        </div>
+        <div>
+            <span style="font-weight: 600;">Duration:</span>
+            {{ frappe.utils.format_duration(doc.duration) }}
+        </div>
+    </div>
+    <div style="text-align: right; margin-top: 32px;">
+        <a class="btn btn-primary" style="padding: 12px 28px; font-size: 1.1rem; border-radius: 8px; background: #3182ce; border: none;" href="/book-flight-ticket-web-form/new?flight={{ doc.name }}">
+            Book Flight
+        </a>
+    </div>
+</div>
+{% endblock %}</div>
